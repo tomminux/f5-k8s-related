@@ -1,0 +1,26 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: adct
+  labels:
+    app: adct
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: adct
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: adct
+    spec:
+      containers:
+      - image: artioml/adct
+        name: adct
+        ports:
+        - containerPort: 80
+          name: adct-http
+        - containerPort: 443
+          name: adct-https
