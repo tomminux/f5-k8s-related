@@ -20,7 +20,7 @@ spec:
       - image: artioml/adct
         name: adct
         ports:
-        - containerPort: 80
+        - containerPort: 8080
           name: adct-http
-        - containerPort: 443
+        - containerPort: 8443
           name: adct-https
