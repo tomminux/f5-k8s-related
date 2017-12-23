@@ -24,7 +24,7 @@ data:
         },
         "backend": {
           "serviceName": "adct",
-          "servicePort": 80,
+          "servicePort": 8080,
           "healthMonitors": [{
             "interval": 30,
             "protocol": "http",
